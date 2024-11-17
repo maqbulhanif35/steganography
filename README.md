@@ -1,8 +1,7 @@
 # steganography
-A program that hides files or folders in png files
-Works only with Linux at the moment
-
-   USAGE
+A program that hides files or folders in png files\n
+Works only with Linux at the moment\n
+   USAGE\n
 The first argument to the png program should be the png file always. eg ./png sample.png file1.txt file2.txt ...
 You can add a folder to the png file with the flag -f eg ./png sample.png folder -f
 You can add multiple files to the same png file but not multiple folders
