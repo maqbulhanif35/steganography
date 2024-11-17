@@ -356,6 +356,7 @@ int main(int argc, char  *argv[])
 	    char  *folderName = slashPath(strings[folderIndex]);
 		folderName = slashPath(strings[folderIndex]);
 	    int len = strlen(strings[folderIndex]);
+		int len2 = strlen(folderName);
 		char *baseFolder;
 		int slash = 0;
 		for (size_t i = 0; i < len; i++)
@@ -396,8 +397,8 @@ int main(int argc, char  *argv[])
 		}
 	    //
 		fseek(pngFile,globalLocation+4,SEEK_SET);
-		fwrite(&len,4,1,pngFile);
-        fwrite(folderName,1,len,pngFile);
+		fwrite(&len2,4,1,pngFile);
+                fwrite(folderName,1,len2,pngFile);
 		fseek(pngFile,0,SEEK_SET);
 		//
 		addFolder(pngFile,folderName);
