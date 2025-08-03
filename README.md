@@ -11,5 +11,5 @@ Works only with Linux at the moment
   You can clean the png file of all the files with the flag --clean eg "extract sample.png --clean"
 
 ## BUILDING
-  gcc png.c -o png 
+  gcc png.c -o png  
   gcc extract.c -o extract
