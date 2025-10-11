@@ -321,10 +321,10 @@ int getIEND(FILE *file){//returns location of IEND signature
 	//get size
 	int location;
 	fseek(file,0,SEEK_END);
-	int size=ftell(file);
+	long int size=ftell(file);
 	fseek(file,0,SEEK_SET);
 	unsigned char *buffer =(unsigned char*)malloc(size);
-	int status = fread(buffer,1,size,file);
+	long int status = fread(buffer,1,size,file);
     
 	if(status!=size){
 		printf("ERROR: UNEXPECTED NUMBER OF BYTES\n",status,size);
